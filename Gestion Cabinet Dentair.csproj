@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{347CC698-71B5-467C-948B-6780F7BA9F1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gestion_Cabinet_Dentair</RootNamespace>
+    <AssemblyName>Gestion Cabinet Dentair</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLS_ADDPATIENT.cs" />
+    <Compile Include="BL\CLS_CONSULT_MANAG.cs" />
+    <Compile Include="BL\CLS_DASHBOARD.cs" />
+    <Compile Include="BL\CLS_LOGIN.cs" />
+    <Compile Include="BL\CLS_MEDICAMENT.cs" />
+    <Compile Include="BL\CLS_PATIENT_MANAG.cs" />
+    <Compile Include="BL\CLS_PAY.cs" />
+    <Compile Include="BL\CLS_RDV.cs" />
+    <Compile Include="BL\CLS_USER_MANAGEMENT.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="GestionCabinetDentaireDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCabinetDentaireDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionCabinetDentaireDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_ADDPATIENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADDPATIENT.Designer.cs">
+      <DependentUpon>FRM_ADDPATIENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_ADD_CONSULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADD_CONSULT.Designer.cs">
+      <DependentUpon>FRM_ADD_CONSULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_ADD_RENDEZ_VOUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ADD_RENDEZ_VOUS.Designer.cs">
+      <DependentUpon>FRM_ADD_RENDEZ_VOUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_CONSULT_MANAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_CONSULT_MANAG.Designer.cs">
+      <DependentUpon>FRM_CONSULT_MANAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_CREATUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_CREATUSER.Designer.cs">
+      <DependentUpon>FRM_CREATUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_EDIT_PATIENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_EDIT_PATIENT.Designer.cs">
+      <DependentUpon>FRM_EDIT_PATIENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_EDIT_USER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_EDIT_USER.Designer.cs">
+      <DependentUpon>FRM_EDIT_USER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DASHBOARD.Designer.cs">
+      <DependentUpon>FRM_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_MAIN.Designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_MEDICAMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_MEDICAMENT.Designer.cs">
+      <DependentUpon>FRM_MEDICAMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_PAIMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PAIMENT.Designer.cs">
+      <DependentUpon>FRM_PAIMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_PATIENT_MANAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PATIENT_MANAG.Designer.cs">
+      <DependentUpon>FRM_PATIENT_MANAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_RENDEZ_VOUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_RENDEZ_VOUS.Designer.cs">
+      <DependentUpon>FRM_RENDEZ_VOUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_MEDICAMENT_FOR_CONSULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_MEDICAMENT_FOR_CONSULT.Designer.cs">
+      <DependentUpon>FRM_SEARCH_MEDICAMENT_FOR_CONSULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_MED_FOR_RDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_MED_FOR_RDV.Designer.cs">
+      <DependentUpon>FRM_SEARCH_MED_FOR_RDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_PATIENT_FOR_CONSULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_PATIENT_FOR_CONSULT.Designer.cs">
+      <DependentUpon>FRM_SEARCH_PATIENT_FOR_CONSULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_PATIENT_FOR_RDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SEARCH_PATIENT_FOR_RDV.Designer.cs">
+      <DependentUpon>FRM_SEARCH_PATIENT_FOR_RDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SHOW_ALL_DATE_CONSULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SHOW_ALL_DATE_CONSULT.Designer.cs">
+      <DependentUpon>FRM_SHOW_ALL_DATE_CONSULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_USER_MANAGEMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_USER_MANAGEMENT.Designer.cs">
+      <DependentUpon>FRM_USER_MANAGEMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\FRM_ADDPATIENT.resx">
+      <DependentUpon>FRM_ADDPATIENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ADD_CONSULT.resx">
+      <DependentUpon>FRM_ADD_CONSULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ADD_RENDEZ_VOUS.resx">
+      <DependentUpon>FRM_ADD_RENDEZ_VOUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_CONSULT_MANAG.resx">
+      <DependentUpon>FRM_CONSULT_MANAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_CREATUSER.resx">
+      <DependentUpon>FRM_CREATUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DASHBOARD.resx">
+      <DependentUpon>FRM_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_EDIT_PATIENT.resx">
+      <DependentUpon>FRM_EDIT_PATIENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_EDIT_USER.resx">
+      <DependentUpon>FRM_EDIT_USER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_MEDICAMENT.resx">
+      <DependentUpon>FRM_MEDICAMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PAIMENT.resx">
+      <DependentUpon>FRM_PAIMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PATIENT_MANAG.resx">
+      <DependentUpon>FRM_PATIENT_MANAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_RENDEZ_VOUS.resx">
+      <DependentUpon>FRM_RENDEZ_VOUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SEARCH_MEDICAMENT_FOR_CONSULT.resx">
+      <DependentUpon>FRM_SEARCH_MEDICAMENT_FOR_CONSULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SEARCH_MED_FOR_RDV.resx">
+      <DependentUpon>FRM_SEARCH_MED_FOR_RDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SEARCH_PATIENT_FOR_CONSULT.resx">
+      <DependentUpon>FRM_SEARCH_PATIENT_FOR_CONSULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SEARCH_PATIENT_FOR_RDV.resx">
+      <DependentUpon>FRM_SEARCH_PATIENT_FOR_RDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SHOW_ALL_DATE_CONSULT.resx">
+      <DependentUpon>FRM_SHOW_ALL_DATE_CONSULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_USER_MANAGEMENT.resx">
+      <DependentUpon>FRM_USER_MANAGEMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="GestionCabinetDentaireDataSet.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet1.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet1.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet10.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet10.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet2.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet2.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet3.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet3.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet4.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet4.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet5.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet5.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet6.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet6.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet7.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet7.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet8.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet8.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet9.xsc">
+      <DependentUpon>GestionCabinetDentaireDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionCabinetDentaireDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionCabinetDentaireDataSet9.xss">
+      <DependentUpon>GestionCabinetDentaireDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7987987.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-align-top-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_align_top_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_align_top_120px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_align_top_120px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_120px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_120px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_120px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_32px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_64px_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_64px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_users_settings_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_health_checkup_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_health_checkup_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_health_checkup_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pill_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pill_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pill_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_payment_history_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_payment_history_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_payment_history_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul y Verde Ilustración Apto para Clínicas Seguridad e Indicaciones Salud General Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo clinica dental dinámico color verde y blanco%281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo clinica dental dinámico color verde y blanco%281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo clinica dental dinámico color verde y blanco%281%292.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
